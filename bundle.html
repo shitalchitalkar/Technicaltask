@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bundle & Save</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .bundle-container {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .bundle-card {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      background: white;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+      position: relative;
+    }
+
+    .bundle-card.selected {
+      border-color: #1f6f68;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+
+    .bundle-card input[type="radio"] {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      transform: scale(1.2);
+    }
+
+    .bundle-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 30px;
+    }
+
+    .bundle-header .price {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .bundle-header .tag {
+      font-size: 14px;
+      color:#1f6f68;;
+      font-weight: bold;
+    }
+
+    .bundle-details {
+      margin-top: 15px;
+      display: none;
+      padding-left: 30px;
+    }
+
+    .bundle-details select {
+      width: 120px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .pair-row {
+      margin-bottom: 10px;
+    }
+
+     body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+
+    .add-to-cart {
+      background-color: #1f6f68; /* teal shade similar to your image */
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #587dd1;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+     .shipping {
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+    }
+
+    .total {
+      float: right;
+      font-weight: bold;
+      color: #000;
+    }
+
+
+.title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .title::before,
+    .title::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 35%;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .title::before {
+      left: 0;
+    }
+
+    .title::after {
+      right: 0;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+<!--<h2 style="color: #1f6f68; border-bottom: 2px solid #ccc; font-size: 24px;font-weight: bold;text-align: center;margin-bottom:
+ 30px;padding-bottom: 10px;">Bundle & Save</h2>-->
+
+ <div class="title">Bundle & Save</div>
+
+<div class="bundle-container">
+  <!-- Card 1 -->
+  <label class="bundle-card">
+    <input type="radio" name="bundle" value="1">
+    <div class="bundle-header">
+      <div>
+        <div>1 Pair</div>
+        <div class="price">DKK 195.00</div>
+      </div>
+      <div class="tag">50% OFF</div>
+    </div>
+    <div class="bundle-details">
+      <!-- No dropdowns for 1 pair -->
+
+ <div class="pair-row">#1 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+      <div class="pair-row">#2 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+
+    </div>
+  </label>
+
+  <!-- Card 2 -->
+  <label class="bundle-card">
+    <input type="radio" name="bundle" value="2">
+    <div class="bundle-header">
+      <div>
+        <div>2 pair</div>
+        <div class="price">DKK 345.00 <span style="text-decoration: line-through; color: grey;"></span></div>
+      </div>
+      <div class="tag">Most Popular<br>40% OFF</div>
+    </div>
+    <div class="bundle-details">
+      <div class="pair-row">#1 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+      <div class="pair-row">#2 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+    </div>
+  </label>
+
+
+<!-- 3card pair-->
+  <label class="bundle-card">
+    <input type="radio" name="bundle" value="3">
+    <div class="bundle-header">
+      <div>
+        <div>3 Pair</div>
+        <div class="price">DKK 528.00</div>
+      </div>
+      <div class="tag">60% OFF</div>
+    </div>
+    <div class="bundle-details">
+      <!-- No dropdowns for 1 pair -->
+
+ <div class="pair-row">#1 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+      <div class="pair-row">#2 
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>Colour</option>
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+
+    </div>
+  </label>
+
+  <!--buttoun add cart-->
+  <div>
+      <span class="shipping">Free 2 Day Shipping</span>
+      <span class="total">Total: DKK 360.00</span>
+    </div>
+
+    <button class="add-to-cart">+ Add to Cart</button>
+
+    <div style="text-align: right;">© Powered by Pumper</div>
+  </div>
+</div>
+
+
+ 
+
+<script>
+  const cards = document.querySelectorAll('.bundle-card');
+
+  cards.forEach(card => {
+    const radio = card.querySelector('input[type="radio"]');
+
+    radio.addEventListener('change', () => {
+      cards.forEach(c => {
+        c.classList.remove('selected');
+        c.querySelector('.bundle-details').style.display = 'none';
+      });
+
+      card.classList.add('selected');
+      const details = card.querySelector('.bundle-details');
+      if (details) details.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
